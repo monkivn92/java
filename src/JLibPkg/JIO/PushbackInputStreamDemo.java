@@ -1,0 +1,50 @@
+package JLibPkg.JIO;
+
+// Demonstrate unread().
+// This program uses try-with-resources. It requires JDK 7 or later.
+import java.io.*;
+
+class PushbackInputStreamDemo
+{
+    public static void main(String args[])
+    {
+        String s = "if (a == 4) a = 0;\n";
+
+        byte buf[] = s.getBytes();
+
+        ByteArrayInputStream in = new ByteArrayInputStream(buf);
+        int c;
+
+        try ( PushbackInputStream f = new PushbackInputStream(in) )
+        {
+            while ((c = f.read()) != -1)
+            {
+               //NOTE: read() is called twice in this while loop
+                switch(c)
+                {
+                    case '=':
+                        if ( (c = f.read()) == '=')
+                        {
+                            System.out.println("duoi sw "+(char)c);
+                            System.out.print(".eq.");
+                           // System.out.print(c);
+                        }
+
+                        else
+                        {
+                            System.out.print("<-");
+                            f.unread(c);
+                        }
+                        break;
+                    default:
+                        System.out.print((char) c);
+                        break;
+                }
+            }
+        }
+        catch(IOException e)
+        {
+            System.out.println("I/O Error: " + e);
+        }
+    }
+}
