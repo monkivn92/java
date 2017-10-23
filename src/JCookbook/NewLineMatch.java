@@ -26,7 +26,7 @@ public class NewLineMatch
             Pattern pml = Pattern.compile(patt[i], Pattern.DOTALL|Pattern.MULTILINE);
 
             found = pml.matcher(input).find();
-            
+
             System.out.println("MultiLine match " + found);
             System.out.println();
         }
