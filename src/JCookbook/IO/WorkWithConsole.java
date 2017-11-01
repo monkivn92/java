@@ -1,6 +1,5 @@
 package JCookbook.IO;
-import java.io.*;
-import JCookbook.jhelp;
+
 public class WorkWithConsole
 {
     public static void main(String args[])

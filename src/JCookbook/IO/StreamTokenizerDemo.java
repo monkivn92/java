@@ -1,7 +1,7 @@
 package JCookbook.IO;
 
 import java.io.*;
-import JCookbook.jhelp;
+import JCookbook.Collection.jhelp;
 
 public class StreamTokenizerDemo
 {

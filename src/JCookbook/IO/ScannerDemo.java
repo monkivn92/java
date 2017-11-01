@@ -1,7 +1,7 @@
 package JCookbook.IO;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-import JCookbook.jhelp;
+import JCookbook.Collection.jhelp;
 public class ScannerDemo
 {
     public static void main(String[] args)
