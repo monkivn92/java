@@ -8,5 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="mail-1.4.7" level="project" />
+    <orderEntry type="library" name="json-20171018" level="project" />
+    <orderEntry type="library" name="jdom2-2.0.6" level="project" />
   </component>
 </module>
